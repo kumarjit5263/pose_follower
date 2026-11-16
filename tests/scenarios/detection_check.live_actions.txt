@@ -1,0 +1,23 @@
+pose_follower - action log
+============================================================
+source      camera 0
+input       live camera
+frame size  1280x720
+created     2026-11-15 21:59:59
+rules       stop = open palm + fist; resume = open palm + scissors; toggle pose diagram = fist + scissors; each held 3 s; hands down for 0.5 s re-arms a gesture
+
+TIME       ACTION              DETAILS
+------------------------------------------------------------
+00:00.000  START               Session started - following the first person who comes into view
+00:00.315  PERSON_FOUND        Person in view - following them
+00:06.891  GESTURE_STARTED     Fist + scissors detected - holding to hide the pose diagram (needs 3 s)
+00:07.993  GESTURE_TOO_SHORT   Fist + scissors released after 1.4 s - too short, nothing changed
+00:55.512  END                 Session ended - 0 stop(s), 0 resume(s), 0 drawing toggle(s)
+
+Summary
+------------------------------------------------------------
+duration            55.51 s (484 frames)
+person followed     100% of frames
+stopped             0% of frames
+stops / resumes     0 / 0
+drawing toggles     0

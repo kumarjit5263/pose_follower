@@ -1,0 +1,24 @@
+{
+  "description": "Live webcam session (~42 s) showing each gesture once, in the normal flow: fist + scissors hides the pose diagram (~9.9 s) and, held again, shows it (~16.7 s); open palm + fist stops following (~22.8 s); open palm + scissors resumes it (~38.1 s).",
+  "toggles": [
+    false,
+    true
+  ],
+  "actions": [
+    "START",
+    "PERSON_FOUND",
+    "GESTURE_STARTED",
+    "POSE_DIAGRAM_HIDDEN",
+    "HANDS_LOWERED",
+    "GESTURE_STARTED",
+    "POSE_DIAGRAM_SHOWN",
+    "HANDS_LOWERED",
+    "GESTURE_STARTED",
+    "FOLLOWING_STOPPED",
+    "GESTURE_STARTED",
+    "FOLLOWING_RESUMED",
+    "PERSON_FOUND",
+    "END"
+  ],
+  "min_followed_fraction": 0.56
+}

@@ -1,0 +1,32 @@
+pose_follower - action log
+============================================================
+source      camera 0
+input       live camera
+frame size  1280x720
+created     2026-11-15 21:58:38
+rules       stop = open palm + fist; resume = open palm + scissors; toggle pose diagram = fist + scissors; each held 3 s; hands down for 0.5 s re-arms a gesture
+
+TIME       ACTION              DETAILS
+------------------------------------------------------------
+00:00.000  START               Session started - following the first person who comes into view
+00:00.000  PERSON_FOUND        Person in view - following them
+00:07.318  GESTURE_STARTED     Fist + scissors detected - holding to hide the pose diagram (needs 3 s)
+00:09.936  POSE_DIAGRAM_HIDDEN POSE DIAGRAM HIDDEN - fist + scissors held for 3 s (tracking keeps running)
+00:11.005  HANDS_LOWERED       Hands lowered - the fist + scissors gesture is accepted again
+00:14.067  GESTURE_STARTED     Fist + scissors detected - holding to show the pose diagram (needs 3 s)
+00:16.684  POSE_DIAGRAM_SHOWN  POSE DIAGRAM SHOWN - fist + scissors held for 3 s (tracking keeps running)
+00:17.924  HANDS_LOWERED       Hands lowered - the fist + scissors gesture is accepted again
+00:20.266  GESTURE_STARTED     Open palm + fist detected - holding to stop following (needs 3 s)
+00:22.849  FOLLOWING_STOPPED   FOLLOWING STOPPED - open palm + fist held for 3 s
+00:35.485  GESTURE_STARTED     Open palm + scissors detected - holding to resume following (needs 3 s)
+00:38.103  FOLLOWING_RESUMED   FOLLOWING RESUMED - open palm + scissors held for 3 s; locking onto the person who made the gesture
+00:38.378  PERSON_FOUND        Person in view - following them
+00:41.754  END                 Session ended - 1 stop(s), 1 resume(s), 2 drawing toggle(s)
+
+Summary
+------------------------------------------------------------
+duration            41.75 s (350 frames)
+person followed     61% of frames
+stopped             39% of frames
+stops / resumes     1 / 1
+drawing toggles     2

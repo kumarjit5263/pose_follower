@@ -1,3 +1,11 @@
+# Runtime dependencies (Python 3.12).
+#
+# mediapipe: 0.10.30+ removed the legacy `mp.solutions` API (Pose / Hands /
+# drawing_utils) that this app uses, so stay below it. On Python 3.12 this
+# resolves to 0.10.21.
 mediapipe>=0.10,<0.10.30
-opencv-python
+# OpenCV: mediapipe itself depends on opencv-contrib-python. Installing
+# opencv-python as well puts two packages into the same `cv2` folder, and they
+# break each other on upgrade/uninstall, so we use the same one mediapipe uses.
+opencv-contrib-python
 numpy

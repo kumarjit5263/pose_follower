@@ -1,0 +1,6 @@
+# Everything needed to run the app *and* the test suite / test-case generator.
+-r requirements.txt
+pytest
+# Only for tests/generate_cases.py: provides the bundled public-domain
+# "astronaut" photo used to build the real-MediaPipe test video.
+scikit-image

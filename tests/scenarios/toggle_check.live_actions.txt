@@ -1,0 +1,44 @@
+pose_follower - action log
+============================================================
+source      camera 0
+input       live camera
+frame size  1280x720
+created     2026-11-15 22:01:58
+rules       stop = open palm + fist; resume = open palm + scissors; toggle pose diagram = fist + scissors; each held 3 s; hands down for 0.5 s re-arms a gesture
+
+TIME       ACTION              DETAILS
+------------------------------------------------------------
+00:00.000  START               Session started - following the first person who comes into view
+00:00.297  PERSON_FOUND        Person in view - following them
+00:02.568  GESTURE_STARTED     Open palm + fist detected - holding to stop following (needs 3 s)
+00:04.185  GESTURE_TOO_SHORT   Open palm + fist released after 2.0 s - too short, nothing changed
+00:10.762  GESTURE_STARTED     Fist + scissors detected - holding to hide the pose diagram (needs 3 s)
+00:12.829  GESTURE_TOO_SHORT   Fist + scissors released after 2.4 s - too short, nothing changed
+00:14.170  GESTURE_STARTED     Fist + scissors detected - holding to hide the pose diagram (needs 3 s)
+00:15.308  GESTURE_TOO_SHORT   Fist + scissors released after 1.4 s - too short, nothing changed
+00:18.029  GESTURE_STARTED     Fist + scissors detected - holding to hide the pose diagram (needs 3 s)
+00:20.714  POSE_DIAGRAM_HIDDEN POSE DIAGRAM HIDDEN - fist + scissors held for 3 s (tracking keeps running)
+00:21.850  HANDS_LOWERED       Hands lowered - the fist + scissors gesture is accepted again
+00:33.215  GESTURE_STARTED     Open palm + fist detected - holding to stop following (needs 3 s)
+00:33.627  GESTURE_TOO_SHORT   Open palm + fist released after 0.7 s - too short, nothing changed
+00:34.660  GESTURE_STARTED     Open palm + fist detected - holding to stop following (needs 3 s)
+00:35.004  GESTURE_TOO_SHORT   Open palm + fist released after 0.7 s - too short, nothing changed
+00:37.416  GESTURE_STARTED     Open palm + fist detected - holding to stop following (needs 3 s)
+00:39.896  GESTURE_TOO_SHORT   Open palm + fist released after 2.8 s - too short, nothing changed
+00:43.854  GESTURE_STARTED     Open palm + fist detected - holding to stop following (needs 3 s)
+00:46.540  FOLLOWING_STOPPED   FOLLOWING STOPPED - open palm + fist held for 3 s
+01:06.031  GESTURE_STARTED     Open palm + scissors detected - holding to resume following (needs 3 s)
+01:08.406  GESTURE_TOO_SHORT   Open palm + scissors released after 2.7 s - too short, nothing changed
+01:11.713  GESTURE_STARTED     Open palm + scissors detected - holding to resume following (needs 3 s)
+01:14.398  FOLLOWING_RESUMED   FOLLOWING RESUMED - open palm + scissors held for 3 s; locking onto the person who made the gesture
+01:14.672  PERSON_FOUND        Person in view - following them
+01:17.395  PERSON_LOST         Followed person no longer detected - searching
+01:19.564  END                 Session ended - 1 stop(s), 1 resume(s), 1 drawing toggle(s)
+
+Summary
+------------------------------------------------------------
+duration            79.56 s (737 frames)
+person followed     60% of frames
+stopped             35% of frames
+stops / resumes     1 / 1
+drawing toggles     1

@@ -1,0 +1,12 @@
+{
+  "description": "Live webcam session (~56 s) of hand shapes that must NOT trigger anything: two fists, two scissors, two open palms, an open palm with another shape, and other shapes (read as NONE), plus one fist + scissors held for only ~1.4 s (too short). The person stays followed throughout and nothing toggles.",
+  "toggles": [],
+  "actions": [
+    "START",
+    "PERSON_FOUND",
+    "GESTURE_STARTED",
+    "GESTURE_TOO_SHORT",
+    "END"
+  ],
+  "min_followed_fraction": 0.95
+}
